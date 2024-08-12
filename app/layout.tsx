@@ -6,8 +6,8 @@ import Navbar from "@/components/navbar/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Airbnb Clone",
-  description: "Powered by Next JS",
+  title: "Tumpang",
+  description: "Be a Professional Freeloader",
 };
 
 export default function RootLayout({
