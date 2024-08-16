@@ -31,7 +31,7 @@ export const createProfileAction = async (
     if (!user) throw new Error("Please login to create a profile");
 
     const rawData = Object.fromEntries(formData);
-    const validatedFields = profileSchema.parse(rawData);
+    const validatedFields = profileSchema.safeParse(rawData);
 
     await db.profile.create({
       data: {
@@ -86,7 +86,7 @@ export const updateProfileAction = async (
   try {
     const rawData = Object.fromEntries(formData);
 
-    const validatedFields = profileSchema.parse(rawData);
+    const validatedFields = profileSchema.safeParse(rawData);
 
     await db.profile.update({
       where: {
